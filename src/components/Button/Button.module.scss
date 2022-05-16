@@ -4,6 +4,7 @@
     align-items: center;
     font-size: 1.6rem;
     font-weight: 700;
+    font-family: 'ProximaNova', sans-serif;
     min-width: 100px;
     border-radius: 4px;
     padding: 9px 16px;
@@ -20,6 +21,12 @@
 .icon + .title,
 .title + .icon {
     margin-left: 8px;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    text-align: center;
 }
 
 .disabled {
@@ -39,7 +46,7 @@
 
 .text {
     &:hover {
-        text-decoration: none;
+        text-decoration: underline;
     }
 }
 
