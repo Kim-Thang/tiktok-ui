@@ -17,7 +17,9 @@
     justify-content: space-between;
     padding: 0 24px;
 }
-
+.logo-link {
+    display: flex;
+}
 
 .more-btn {
     font-size: 2rem;
@@ -55,7 +57,6 @@
     font-family: 'ProximaNova', sans-serif;
     background-color: var(--primary);
 }
-
 
 .user-avatar {
     width: 32px;

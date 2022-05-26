@@ -21,7 +21,8 @@ import Menu from '../../../Popper/Menu';
 import { InboxIcon, MessageIcon, UploadIcon } from '../../../Icons';
 import Image from '../../../Image';
 import Search from '../Search';
-
+import routesConfig from '../../../../config/routes';
+import { Link } from 'react-router-dom';
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
     {
@@ -59,7 +60,6 @@ const handleChange = (menuItems) => {
 };
 
 function Header() {
- 
     const currentUser = true;
 
     const userMenu = [
@@ -91,28 +91,42 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <img src={images.logo} alt="tiktok" />
+                    <Link to={routesConfig.home} className={cx('logo-link')}>
+                        <img src={images.logo} alt="tiktok" />
+                    </Link>
                 </div>
                 <Search />
                 <div className={cx('actions')}>
                     {currentUser ? (
                         <>
-                        <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
-                            <button className={cx('action-btn')}>
-                                <UploadIcon />
-                            </button>
-                        </Tippy>
-                        <Tippy delay={[0, 50]} content="Upload video" placement="bottom">
-                            <button className={cx('action-btn')}>
-                                <MessageIcon />
-                            </button>
-                        </Tippy>
-                        <Tippy delay={[0, 50]} content="Upload video" placement="bottom">
-                            <button className={cx('action-btn')}>
-                                <InboxIcon />
-                                <span className={cx('badge')}>12</span>
-                            </button>
-                        </Tippy>
+                            <Tippy
+                                delay={[0, 200]}
+                                content="Upload video"
+                                placement="bottom"
+                            >
+                                <button className={cx('action-btn')}>
+                                    <UploadIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy
+                                delay={[0, 50]}
+                                content="Upload video"
+                                placement="bottom"
+                            >
+                                <button className={cx('action-btn')}>
+                                    <MessageIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy
+                                delay={[0, 50]}
+                                content="Upload video"
+                                placement="bottom"
+                            >
+                                <button className={cx('action-btn')}>
+                                    <InboxIcon />
+                                    <span className={cx('badge')}>12</span>
+                                </button>
+                            </Tippy>
                         </>
                     ) : (
                         <>
@@ -121,7 +135,10 @@ function Header() {
                         </>
                     )}
 
-                    <Menu menu={currentUser ? userMenu : MENU_ITEMS} onChange={handleChange}>
+                    <Menu
+                        menu={currentUser ? userMenu : MENU_ITEMS}
+                        onChange={handleChange}
+                    >
                         {currentUser ? (
                             <Image
                                 className={cx('user-avatar')}
