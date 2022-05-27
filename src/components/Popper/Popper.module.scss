@@ -1,9 +1,11 @@
 .wrapper {
     width: 100%;
-    max-height: (min(100vh - 96px) -6px, 734px);
-    min-height: 100px;
+    max-height: min((100vh - 96px) - 60px, 734px);
+    min-height: 100px;;
     background-color: #fff;
     padding-top: 8px;
     box-shadow: rgba(0 0 0 / 12%) 0px 2px 12px;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
 }

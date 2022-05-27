@@ -3,11 +3,17 @@
     --search-height: 46px;
     --search-top-spacer: 9px;
 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
     height: var(--default-layout-header-height);
     width: 100%;
     display: flex;
     justify-content: center;
     box-shadow: 0px 1px 1px rgb(0 0 0/12%);
+    background-color: var(--white);
 }
 .inner {
     height: 100%;

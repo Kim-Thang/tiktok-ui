@@ -34,7 +34,7 @@ const MENU_ITEMS = [
                 {
                     type: 'Language',
                     code: 'vi',
-                    title: 'English',
+                    title: 'Việt Nam',
                 },
                 {
                     type: 'Language',
