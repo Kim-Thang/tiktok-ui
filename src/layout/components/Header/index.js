@@ -14,14 +14,14 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
 import styles from './Header.module.scss';
-import images from '../../../../assets/images';
+import images from '../../../assets/images';
 
-import Button from '../../../Button';
-import Menu from '../../../Popper/Menu';
-import { InboxIcon, MessageIcon, UploadIcon } from '../../../Icons';
-import Image from '../../../Image';
+import Button from '../../../components/Button';
+import Menu from '../../../components/Popper/Menu';
+import { InboxIcon, MessageIcon, UploadIcon } from '../../../components/Icons';
+import Image from '../../../components/Image';
 import Search from '../Search';
-import routesConfig from '../../../../config/routes';
+import config from '../../../config';
 import { Link } from 'react-router-dom';
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -91,7 +91,7 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <Link to={routesConfig.home} className={cx('logo-link')}>
+                    <Link to={config.routes.home} className={cx('logo-link')}>
                         <img src={images.logo} alt="tiktok" />
                     </Link>
                 </div>

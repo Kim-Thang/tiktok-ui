@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Tippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
+import PropTypes from 'prop-types';
 
 import { Wrapper as PopperWrapper } from '../../Popper/';
 import Header from './Header';
@@ -71,5 +72,13 @@ function Menu({
         </Tippy>
     );
 }
+
+Menu.propTypes = {
+    children: PropTypes.node.isRequired,
+    menu: PropTypes.array,
+    hideOnClick: PropTypes.bool.isRequired,
+    onChange: PropTypes.func,
+}
+
 
 export default Menu;
